@@ -1,0 +1,49 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+.tab {
+    @apply inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 transition duration-150 ease-in-out;
+}
+
+
+.tab-unselected {
+    @apply border-transparent text-gray-500;
+}
+
+.tab-unselected-hover {
+    @apply text-gray-700 border-gray-300;
+}
+
+.tab-unselected-focus {
+    @apply outline-none text-gray-700 border-gray-300;
+}
+
+.tab-selected {
+    @apply border-indigo-500 text-gray-900;
+}
+
+.tab-selected-focus {
+    @apply outline-none border-indigo-700;
+}
+
+.mobile-menu-selected {
+    @apply block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 transition duration-150 ease-in-out;
+}
+
+.mobile-menu-selected-focus{
+    @apply outline-none text-indigo-800 bg-indigo-100 border-indigo-700;
+}
+
+.mobile-menu {
+    @apply block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 transition duration-150 ease-in-out;
+}
+
+.mobile-menu-focus {
+    @apply outline-none text-gray-800 bg-gray-50 border-gray-300;
+}
+
+.mobile-menu-hover {
+    @apply text-gray-800 bg-gray-50 border-gray-300;
+}
+@import "tailwindcss/utilities";
