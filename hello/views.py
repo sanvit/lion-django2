@@ -7,7 +7,7 @@ def home(req):
     return render(req,'home.html',{'blogobject':blogs,'title':'제목','header':'목록 보기','currentTab':1})
 
 def new(req):
-    return render(req,'new.html')
+    return render(req,'new.html',{'title':'글쓰기','header':'새 글 쓰기','currentTab':2})
 
 def create(req):
     if(req.method=='POST'):

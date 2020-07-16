@@ -2,7 +2,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
-        <link rel="stylesheet" href="/static/tailwind.css">
+        <link rel="stylesheet" href="https://la-sw-1.b-cdn.net/tailwind.css">
         <title>{{title}}</title>
         <meta charset="utf-8">
         <style>
@@ -23,23 +23,23 @@
                       <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-on-white.svg" alt="Workflow logo">
                     </div>
                     <div class="hidden sm:-my-px sm:ml-6 sm:flex">
-                      <a href="#" @click="tab=1"
+                      <a href="{% url 'home' %}" @click="tab=1"
                       :class="{'tab-selected focus:tab-selected-focus' : tab == 1, 'tab-unselected hover:tab-unselected-hover focus:tab-unselected-focus': tab!=1}"
                       class="tab">
-                        글쓰기
+                        Home
                       </a>
                       <a @click="tab=2"
-                      href="#"
+                      href="{% url 'new' %}"
                       :class="{'tab-selected focus:tab-selected-focus' : tab == 2, 'tab-unselected hover:tab-unselected-hover focus:tab-unselected-focus': tab!=2}"
                       class="ml-8 tab">
-                        Team
+                        New Post
                       </a>
-                      <a @click="tab=3"
+                      <p
                       href="#"
                       :class="{'tab-selected focus:tab-selected-focus' : tab == 3, 'tab-unselected hover:tab-unselected-hover focus:tab-unselected-focus': tab!=3}"
                       class="ml-8 tab">
-                        Projects
-                      </a>
+                        Edit
+                    </p>
                       <a @click="tab=4"
                        href="#"
                        :class="{'tab-selected focus:tab-selected-focus' : tab == 4, 'tab-unselected hover:tab-unselected-hover focus:tab-unselected-focus': tab!=4}"
@@ -74,15 +74,15 @@
               x-transition:leave-end="opacity-0 scale-100"
               >
                 <div class="pt-2 pb-3">
-                  <a href="#" @click="tab=1"
+                  <a href="{% url 'home' %}" @click="tab=1"
                   :class="{'mobile-menu-selected focus:mobile-menu-selected' : tab == 1, 'mobile-menu focus:mobile-menu-focus hover:mobile-menu-hover': tab!=1}"
-                  class="">Dashboard</a>
-                  <a href="#" @click="tab=2"
+                  class="">Home</a>
+                  <a href="{% url 'new' %}" @click="tab=2"
                   :class="{'mobile-menu-selected focus:mobile-menu-selected' : tab == 2, 'mobile-menu focus:mobile-menu-focus hover:mobile-menu-hover': tab!=2}"
-                  class="mt-1">Team</a>
-                  <a href="#" @click="tab=3"
+                  class="mt-1">New Post</a>
+                  <p
                   :class="{'mobile-menu-selected focus:mobile-menu-selected' : tab == 3, 'mobile-menu focus:mobile-menu-focus hover:mobile-menu-hover': tab!=3}"
-                  class="mt-1">Projects</a>
+                  class="mt-1">Edit</p>
                   <a href="#" @click="tab=4"
                   :class="{'mobile-menu-selected focus:mobile-menu-selected' : tab == 4, 'mobile-menu focus:mobile-menu-focus hover:mobile-menu-hover': tab!=4}"
                   class="mt-1">Calendar</a>
@@ -92,7 +92,7 @@
             <div class="py-10">
               <header>
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <h1 class="text-3xl font-bold leading-tight text-gray-900">
+                  <h1 class="text-3xl font-bold leading-tight text-gray-900 title mb-4">
                     {{header}}
                   </h1>
                 </div>
