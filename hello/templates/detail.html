@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="mx-auto">
+    <div>
+    <p class="text-gray-600 my-2">{{onepost.created_at}}</p>
+    <p class="text-lg">{{onepost.body}}</p>
+    </div>
+    
+    <span class="mt-2 inline-flex">
+        <span class="inline-flex rounded-md shadow-sm">
+            <a href="{% url 'edit' onepost.id %}">
+            <button type="button"
+            class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
+            수정하기
+            </button>
+        </a>
+        </span>
+        <span class="mx-4 inline-flex rounded-md shadow-sm">
+            <a href="{% url 'delete' onepost.id %}">
+                <button type="button"
+                class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
+                삭제하기
+                </button>
+            </a>
+        </span>
+    </span>
+    
+
+    
+</div>
+{% endblock %}

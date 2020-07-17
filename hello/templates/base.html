@@ -19,8 +19,8 @@
                 <div class="flex justify-between h-16">
                   <div class="flex">
                     <div class="flex-shrink-0 flex items-center">
-                      <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" alt="Workflow logo">
-                      <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-on-white.svg" alt="Workflow logo">
+                      <a href="/"><img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" alt="Workflow logo">
+                      <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-on-white.svg" alt="Workflow logo"></a>
                     </div>
                     <div class="hidden sm:-my-px sm:ml-6 sm:flex">
                       <a href="{% url 'home' %}" @click="tab=1"
@@ -38,14 +38,13 @@
                       href="#"
                       :class="{'tab-selected focus:tab-selected-focus' : tab == 3, 'tab-unselected hover:tab-unselected-hover focus:tab-unselected-focus': tab!=3}"
                       class="ml-8 tab">
-                        Edit
+                        Detail
                     </p>
-                      <a @click="tab=4"
-                       href="#"
+                      <p 
                        :class="{'tab-selected focus:tab-selected-focus' : tab == 4, 'tab-unselected hover:tab-unselected-hover focus:tab-unselected-focus': tab!=4}"
                       class="ml-8 tab">
-                        Calendar
-                      </a>
+                        Edit
+                  </p>
                     </div>
                   </div>
                 
@@ -82,23 +81,23 @@
                   class="mt-1">New Post</a>
                   <p
                   :class="{'mobile-menu-selected focus:mobile-menu-selected' : tab == 3, 'mobile-menu focus:mobile-menu-focus hover:mobile-menu-hover': tab!=3}"
-                  class="mt-1">Edit</p>
-                  <a href="#" @click="tab=4"
+                  class="mt-1">Detail</p>
+                  <p
                   :class="{'mobile-menu-selected focus:mobile-menu-selected' : tab == 4, 'mobile-menu focus:mobile-menu-focus hover:mobile-menu-hover': tab!=4}"
-                  class="mt-1">Calendar</a>
+                  class="mt-1">Edit</p>
                 </div>
             </nav>
           
-            <div class="py-10">
+            <div class="py-4 sm:py-10">
               <header>
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <h1 class="text-3xl font-bold leading-tight text-gray-900 title mb-4">
+                  <h1 class="text-3xl font-bold leading-tight text-gray-900 title mb-8">
                     {{header}}
                   </h1>
                 </div>
               </header>
               <main>
-                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="max-w-7xl px-4 mx-auto sm:px-6 lg:px-10">
                   {% block content %}
                   {% endblock %}
                 </div>

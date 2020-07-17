@@ -22,4 +22,8 @@ urlpatterns = [
     path('', hello.views.home,name='home'),
     path('new', hello.views.new,name='new'),
     path('create', hello.views.create,name='create'),
+    path('post/<int:post_id>', hello.views.post,name='post'),
+    path('edit/<int:post_id>', hello.views.edit,name='edit'),
+    path('delete/<int:post_id>', hello.views.delete,name='delete'),
+    path('update/<int:post_id>', hello.views.update,name='update'),
 ]
